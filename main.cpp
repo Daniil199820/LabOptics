@@ -56,7 +56,7 @@ int main()
 		{
 			for (int j = -128; j <=128; j++)
 			{
-				if (sqrt(i*i + j*j) < k)
+				if (sqrt(i*i + j*j) < k/2)
 				{
 					partI = partI + frt.operator()((i+128), (j+128));
 				}
