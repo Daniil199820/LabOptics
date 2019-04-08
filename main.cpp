@@ -49,7 +49,7 @@ int main()
 	N = 0.0;
 	ofstream fout;
 	fout.open("mas.txt");
-	for(int k =0; k<128; k++)
+	for(int k =0; k<256; k=k+2)
 	{
 		partI = 0.0;
 		for (int i = -128; i <=128; i++)
@@ -62,7 +62,7 @@ int main()
 				}
 			}
 		}
-		fout << partI / I <<" ";
+		fout << partI / I <<endl;
 	}
 	fout.close();
 	cout << I;
