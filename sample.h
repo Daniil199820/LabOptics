@@ -71,6 +71,12 @@ public:
 	double CalcCoordY(int i, double dy = 1.) const;
 };
 /////////////////////////////////////////////////////////////////////////////
+//пустой конструктор
+template<class PAR>
+Sample<PAR>::Sample()
+{
+
+}
 // полный конструктор
 template <class PAR>
 Sample<PAR>::Sample(int size_x, int size_y)

@@ -1,6 +1,6 @@
 #if !defined INTEGRATION_H
 #define INTEGRATION_H
-
+#include"sample.h"
 #include "function.h"
 /////////////////////////////////////////////////////////////////////////////
 class Integration
