@@ -1,3 +1,4 @@
+
 #include"interpolation.h"
 #include"sample1d.h"
 #include<fstream>
@@ -35,17 +36,17 @@ void main()
 	vector<double>x_2;
 	for (int i = 0; i < interpolationLine.m_inter.m_x.size(); i++)
 	{
-		x.push_back(interpolationLine.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationLine.m_inter.m_x[i]);
-		x_2.push_back((interpolationLine.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationLine.m_inter.m_x[i]))*(interpolationLine.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationLine.m_inter.m_x[i])));
+		x.push_back(interpolationLine.m_inter.m_y[i] - interpolationLine.m_inter.Y(interpolationLine.m_inter.m_x[i]));
+		x_2.push_back((interpolationLine.m_inter.m_y[i] - interpolationLine.m_inter.Y(interpolationLine.m_inter.m_x[i]))*(interpolationLine.m_inter.m_y[i] - interpolationLine.m_inter.Y(interpolationLine.m_inter.m_x[i])));
 	}
-	skv<< sqrt((accumulate(x_2.begin(), x_2.end(), 0.0) / interpolationLine.m_inter.m_x.size()) - accumulate(x.begin(), x.end(), 0.0) / interpolationLine.m_inter.m_x.size()*accumulate(x.begin(), x.end(), 0.0) / interpolationLine.m_inter.m_x.size())<<endl ;
-	
+	skv << sqrt((accumulate(x_2.begin(), x_2.end(), 0.0) / interpolationLine.m_inter.m_x.size()) - accumulate(x.begin(), x.end(), 0.0) / interpolationLine.m_inter.m_x.size()*accumulate(x.begin(), x.end(), 0.0) / interpolationLine.m_inter.m_x.size()) << endl;
+
 	vector<double>y;
 	vector<double>y_2;
 	for (int i = 0; i < interpolationSquare.m_inter.m_x.size(); i++)
 	{
-		y.push_back(interpolationSquare.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationSquare.m_inter.m_x[i]);
-		y_2.push_back((interpolationSquare.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationSquare.m_inter.m_x[i]))*(interpolationSquare.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationSquare.m_inter.m_x[i])));
+		y.push_back(interpolationSquare.m_inter.m_y[i] - interpolationSquare.m_inter.Y(interpolationSquare.m_inter.m_x[i]));
+		y_2.push_back((interpolationSquare.m_inter.m_y[i] - interpolationSquare.m_inter.Y(interpolationSquare.m_inter.m_x[i]))*(interpolationSquare.m_inter.m_y[i] - interpolationSquare.m_inter.Y(interpolationSquare.m_inter.m_x[i])));
 	}
 	skv << sqrt((accumulate(y_2.begin(), y_2.end(), 0.0) / interpolationSquare.m_inter.m_x.size()) - accumulate(y.begin(), y.end(), 0.0) / interpolationSquare.m_inter.m_x.size()*accumulate(y.begin(), y.end(), 0.0) / interpolationSquare.m_inter.m_x.size()) << endl;
 
@@ -53,8 +54,8 @@ void main()
 	vector<double>k_2;
 	for (int i = 0; i < interpolationNewt.m_inter.m_x.size(); i++)
 	{
-		k.push_back(interpolationNewt.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationNewt.m_inter.m_x[i]);
-		k_2.push_back((interpolationNewt.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationNewt.m_inter.m_x[i]))*(interpolationNewt.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationNewt.m_inter.m_x[i])));
+		k.push_back(interpolationNewt.m_inter.m_y[i] - interpolationNewt.m_inter.Y(interpolationNewt.m_inter.m_x[i]));
+		k_2.push_back((interpolationNewt.m_inter.m_y[i] - interpolationNewt.m_inter.Y(interpolationNewt.m_inter.m_x[i]))*(interpolationNewt.m_inter.m_y[i] - interpolationNewt.m_inter.Y(interpolationNewt.m_inter.m_x[i])));
 	}
 	skv << sqrt((accumulate(k_2.begin(), k_2.end(), 0.0) / interpolationNewt.m_inter.m_x.size()) - accumulate(k.begin(), k.end(), 0.0) / interpolationNewt.m_inter.m_x.size()*accumulate(k.begin(), k.end(), 0.0) / interpolationNewt.m_inter.m_x.size()) << endl;
 
@@ -62,8 +63,8 @@ void main()
 	vector<double>z_2;
 	for (int i = 0; i < interpolationLagrange.m_inter.m_x.size(); i++)
 	{
-		z.push_back(interpolationLagrange.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationLagrange.m_inter.m_x[i]);
-		z_2.push_back((interpolationLagrange.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationLagrange.m_inter.m_x[i]))*(interpolationLagrange.m_inter.m_y[i] - interpolation.m_inter.Y(interpolationLagrange.m_inter.m_x[i])));
+		z.push_back(interpolationLagrange.m_inter.m_y[i] - interpolationLagrange.m_inter.Y(interpolationLagrange.m_inter.m_x[i]));
+		z_2.push_back((interpolationLagrange.m_inter.m_y[i] - interpolationLagrange.m_inter.Y(interpolationLagrange.m_inter.m_x[i]))*(interpolationLagrange.m_inter.m_y[i] - interpolationLagrange.m_inter.Y(interpolationLagrange.m_inter.m_x[i])));
 	}
 	skv << sqrt((accumulate(z_2.begin(), z_2.end(), 0.0) / interpolationLagrange.m_inter.m_x.size()) - accumulate(z.begin(), z.end(), 0.0) / interpolationLagrange.m_inter.m_x.size()*accumulate(z.begin(), z.end(), 0.0) / interpolationLagrange.m_inter.m_x.size()) << endl;
 
