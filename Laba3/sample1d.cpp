@@ -18,7 +18,7 @@ void Sample1D::SetSample(double x1, int n, double dx)
 }
 double Sample1D::Y(double x)
 {
-	return (sin(x) / x);
+	return (sin(x)*x);
 }
 Sample1D &Sample1D:: operator=(const Sample1D &temp)
 {

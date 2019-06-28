@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  workwFFT.cpp
+  SampleComplex.cpp
+  main.cpp
+  CTIPlugin::InvokeCallback=APPCRASHCTIPlugin::InvokeCallback=APPCRASHCTIPlugin::InvokeCallback=APPCRASHCTIPlugin::InvokeCallback=APPCRASH
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(360,5): error MSB6006: "CL.exe" завершилась с кодом 1.
